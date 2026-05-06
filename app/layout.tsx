@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'DreamBIG Technology Arena - Fundraising Platform - InTown Metaverse',
-  description: 'Control Center for DreamBIG Technology Arena, the world\'s first fully decentralized digital stadium. Manage your event\'s entire economic ecosystem with our powerful smart contract protocol.',
+  title: 'DreamBIG Technology Arena - World\'s First Decentralized Digital Stadium',
+  description: 'Experience the future of live entertainment at DreamBIG Technology Arena. A revolutionary blockchain-powered venue hosting concerts, sports, and events in an immersive digital metaverse with real-world economic opportunities.',
 };
 
 export default function RootLayout({
