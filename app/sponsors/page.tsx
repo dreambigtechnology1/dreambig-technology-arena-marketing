@@ -17,12 +17,12 @@ export default function SponsorsPage() {
       <Navigation />
 
       {/* Back Navigation */}
-      <div className="container mx-auto px-4 pt-6">
+      <div className="container mx-auto px-4 sm:px-6 pt-4 sm:pt-6">
         <Link 
           href="/"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-[#C6FF00] transition-colors"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-[#C6FF00] transition-colors text-sm sm:text-base"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
           Back to Role Selection
@@ -30,7 +30,7 @@ export default function SponsorsPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/img/stadium_interior.png"
@@ -42,40 +42,40 @@ export default function SponsorsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         </div>
         
-        <div className="relative h-full flex items-center">
-          <div className="container mx-auto px-4">
+        <div className="relative h-full min-h-[60vh] sm:min-h-[70vh] flex items-center">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
             <div className="max-w-4xl">
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-[#C6FF00] via-[#00F0FF] to-[#4B21FF] bg-clip-text text-transparent">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#C6FF00] via-[#00F0FF] to-[#4B21FF] bg-clip-text text-transparent">
                 Sponsor DreamBIG Technology Arena
               </h1>
-              <p className="text-3xl md:text-4xl text-gray-200 mb-8 leading-relaxed">
-                The world's largest digital venue with <span className="text-[#4B21FF] font-bold">250 Million seat capacity</span>. <span className="text-[#C6FF00] font-bold">Zero ad fraud.</span> <span className="text-[#00F0FF] font-bold">Verified delivery</span> of every impression.
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
+                The world's largest digital venue with <span className="text-[#4B21FF] font-bold">250M seat capacity</span>. <span className="text-[#C6FF00] font-bold">Zero ad fraud.</span> <span className="text-[#00F0FF] font-bold">Verified delivery</span> of every impression.
               </p>
               
-              <div className="flex flex-wrap gap-4 mb-8">
-                <div className="bg-[#C6FF00]/20 border border-[#C6FF00]/50 rounded-lg px-6 py-3">
-                  <div className="text-sm text-gray-400">Venue Capacity</div>
-                  <div className="text-3xl font-bold text-[#C6FF00]">250 million</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <div className="bg-[#C6FF00]/20 border border-[#C6FF00]/50 rounded-lg px-3 sm:px-4 md:px-6 py-2 sm:py-3">
+                  <div className="text-xs sm:text-sm text-gray-400">Venue Capacity</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#C6FF00]">250M</div>
                   <div className="text-xs text-gray-500">Seats</div>
                 </div>
-                <div className="bg-[#4B21FF]/20 border border-[#4B21FF]/50 rounded-lg px-6 py-3">
-                  <div className="text-sm text-gray-400">Potential Reach</div>
-                  <div className="text-3xl font-bold text-[#4B21FF]">2x</div>
+                <div className="bg-[#4B21FF]/20 border border-[#4B21FF]/50 rounded-lg px-3 sm:px-4 md:px-6 py-2 sm:py-3">
+                  <div className="text-xs sm:text-sm text-gray-400">Potential Reach</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#4B21FF]">2x</div>
                   <div className="text-xs text-gray-500">Super Bowl</div>
                 </div>
-                <div className="bg-[#00F0FF]/20 border border-[#00F0FF]/50 rounded-lg px-6 py-3">
-                  <div className="text-sm text-gray-400">Ad Fraud</div>
-                  <div className="text-3xl font-bold text-[#00F0FF]">0%</div>
+                <div className="bg-[#00F0FF]/20 border border-[#00F0FF]/50 rounded-lg px-3 sm:px-4 md:px-6 py-2 sm:py-3">
+                  <div className="text-xs sm:text-sm text-gray-400">Ad Fraud</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#00F0FF]">0%</div>
                   <div className="text-xs text-gray-500">Verified</div>
                 </div>
-                <div className="bg-[#C6FF00]/20 border border-[#C6FF00]/50 rounded-lg px-6 py-3">
-                  <div className="text-sm text-gray-400">Media Value</div>
-                  <div className="text-3xl font-bold text-[#C6FF00]">$200 million</div>
+                <div className="bg-[#C6FF00]/20 border border-[#C6FF00]/50 rounded-lg px-3 sm:px-4 md:px-6 py-2 sm:py-3">
+                  <div className="text-xs sm:text-sm text-gray-400">Media Value</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#C6FF00]">$200M</div>
                   <div className="text-xs text-gray-500">per event</div>
                 </div>
               </div>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <a 
                   href="#brand-activations"
                   className="px-8 py-4 bg-gradient-to-r from-[#4B21FF] to-[#C6FF00] rounded-lg font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(198,255,0,0.5)]"

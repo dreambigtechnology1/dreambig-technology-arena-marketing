@@ -53,10 +53,10 @@ export default function EconomyPage() {
       <Navigation />
 
       {/* Back Navigation */}
-      <div className="container mx-auto px-4 pt-6">
+      <div className="container mx-auto px-4 sm:px-6 pt-4 sm:pt-6">
         <Link 
           href="/"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-[#C6FF00] transition-colors"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-[#C6FF00] transition-colors text-sm sm:text-base"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

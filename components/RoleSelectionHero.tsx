@@ -43,7 +43,7 @@ function RoleCard({ icon, title, benefit, href, accentColor, onHover, onHoverEnd
 
   return (
     <div
-      className="relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm border-2 rounded-2xl p-8 transition-all duration-300 hover:scale-105"
+      className="relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm border-2 rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:scale-105"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -52,20 +52,20 @@ function RoleCard({ icon, title, benefit, href, accentColor, onHover, onHoverEnd
       }}
     >
       {/* Icon */}
-      <div className="text-7xl mb-6 text-center">{icon}</div>
+      <div className="text-5xl sm:text-6xl md:text-7xl mb-4 sm:mb-6 text-center">{icon}</div>
 
       {/* Title */}
-      <h3 className="text-3xl font-bold text-white mb-4 text-center">{title}</h3>
+      <h3 className="text-2xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 text-center">{title}</h3>
 
       {/* Benefit Statement */}
-      <p className="text-sm text-gray-300 mb-6 text-center leading-relaxed min-h-[60px]">
+      <p className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed min-h-[50px] sm:min-h-[60px]">
         {benefit}
       </p>
 
       {/* CTA Button */}
       <Link href={href}>
         <button
-          className="w-full py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105"
+          className="w-full py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105"
           style={{
             background: `linear-gradient(135deg, ${accentColor}, ${accentColor}dd)`,
             boxShadow: isHovered ? `0 0 20px ${accentColor}80` : undefined,
@@ -137,7 +137,7 @@ export default function RoleSelectionHero() {
   ];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-hidden">
       {/* Background Slideshow */}
       {activeImages.map((image, index) => (
         <div
@@ -159,26 +159,26 @@ export default function RoleSelectionHero() {
       ))}
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+      <div className="relative min-h-screen flex items-center justify-center py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-12">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8">
+            <div className="text-center mb-8 sm:mb-10 md:mb-12">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2">
                 <span className="bg-gradient-to-r from-[#00F0FF] via-[#C6FF00] to-[#4B21FF] bg-clip-text text-transparent">
                   DreamBIG Technology Arena
                 </span>
               </h1>
               
-              <h2 className="text-4xl md:text-5xl text-white font-bold mb-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-2 sm:mb-3 px-2">
                 Choose Your Role
               </h2>
-              <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 How will you participate in the DreamBIG Technology Arena ecosystem?
               </p>
             </div>
             {/* Role Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
               {roles.map((role) => (
                 <RoleCard
                   key={role.id}
@@ -194,8 +194,8 @@ export default function RoleSelectionHero() {
             </div>
 
             {/* Bottom Tagline */}
-            <div className="mt-16 text-center">
-              <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto">
+            <div className="mt-8 sm:mt-12 md:mt-16 text-center px-4">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto">
                 <span className="text-[#C6FF00] font-bold">You're not just buying a ticket.</span>
                 {' '}You're securing stakeholder status in a $1.9B per-event economy.
               </p>
@@ -205,18 +205,18 @@ export default function RoleSelectionHero() {
       </div>
 
       {/* Small Logo in Bottom Corner */}
-      <div className="absolute bottom-8 left-8 z-20">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 z-20">
         <Image
           src="/img/logo_intown_metaverse.png"
           alt="InTown Metaverse"
-          width={150}
-          height={45}
-          className="opacity-60 hover:opacity-100 transition-opacity"
+          width={100}
+          height={30}
+          className="opacity-60 hover:opacity-100 transition-opacity w-20 sm:w-28 md:w-36 h-auto"
         />
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2 sm:space-x-3">
         {activeImages.map((_, index) => (
           <button
             key={index}
@@ -225,9 +225,9 @@ export default function RoleSelectionHero() {
               setIsAutoPlaying(false);
               setTimeout(() => setIsAutoPlaying(true), 3000);
             }}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
               index === currentImageIndex
-                ? 'bg-[#C6FF00] w-8 shadow-[0_0_10px_rgba(198,255,0,0.8)]'
+                ? 'bg-[#C6FF00] w-6 sm:w-8 shadow-[0_0_10px_rgba(198,255,0,0.8)]'
                 : 'bg-white/50 hover:bg-white/80'
             }`}
             aria-label={`Go to slide ${index + 1}`}

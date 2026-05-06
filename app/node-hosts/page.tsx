@@ -18,45 +18,45 @@ export default function NodeHostsPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden">
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#4B21FF]/20 via-[#00F0FF]/10 to-transparent" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             {/* Main Headline */}
-            <h1 className="text-6xl md:text-8xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6">
               <span className="bg-gradient-to-r from-[#4B21FF] via-[#00F0FF] to-[#C6FF00] bg-clip-text text-transparent">
                 The Venue Pillar
               </span>
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto px-2">
               Turn your server into critical infrastructure for a $1.9B event. Support 250 million-capacity venue infrastructure and receive service fees for verified delivery.
             </p>
 
             {/* Key Metrics Badges */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-              <div className="p-6 rounded-xl border-2 border-[#00F0FF]/30 bg-gradient-to-br from-[#00F0FF]/10 to-transparent">
-                <div className="text-sm text-gray-400 mb-2">Infrastructure Capacity</div>
-                <div className="text-4xl font-bold text-[#00F0FF]">250 million</div>
-                <div className="text-sm text-gray-400 mt-1">Concurrent Slots</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto">
+              <div className="p-4 sm:p-6 rounded-xl border-2 border-[#00F0FF]/30 bg-gradient-to-br from-[#00F0FF]/10 to-transparent">
+                <div className="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">Infrastructure Capacity</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#00F0FF]">250M</div>
+                <div className="text-xs sm:text-sm text-gray-400 mt-1">Concurrent Slots</div>
               </div>
-              <div className="p-6 rounded-xl border-2 border-[#C6FF00]/30 bg-gradient-to-br from-[#C6FF00]/10 to-transparent">
-                <div className="text-sm text-gray-400 mb-2">Revenue Pool</div>
-                <div className="text-4xl font-bold text-[#C6FF00]">$1.9B</div>
-                <div className="text-sm text-gray-400 mt-1">Per Event</div>
+              <div className="p-4 sm:p-6 rounded-xl border-2 border-[#C6FF00]/30 bg-gradient-to-br from-[#C6FF00]/10 to-transparent">
+                <div className="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">Revenue Pool</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#C6FF00]">$1.9B</div>
+                <div className="text-xs sm:text-sm text-gray-400 mt-1">Per Event</div>
               </div>
-              <div className="p-6 rounded-xl border-2 border-[#4B21FF]/30 bg-gradient-to-br from-[#4B21FF]/10 to-transparent">
-                <div className="text-sm text-gray-400 mb-2">Capital Required</div>
-                <div className="text-4xl font-bold text-[#4B21FF]">$0</div>
-                <div className="text-sm text-gray-400 mt-1">Use Existing Hardware</div>
+              <div className="p-4 sm:p-6 rounded-xl border-2 border-[#4B21FF]/30 bg-gradient-to-br from-[#4B21FF]/10 to-transparent">
+                <div className="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">Capital Required</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4B21FF]">$0</div>
+                <div className="text-xs sm:text-sm text-gray-400 mt-1">Use Existing Hardware</div>
               </div>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
               <a
                 href="#service-fees"
                 className="px-8 py-4 rounded-xl font-bold text-lg bg-gradient-to-r from-[#4B21FF] to-[#00F0FF] hover:scale-105 transition-transform"
