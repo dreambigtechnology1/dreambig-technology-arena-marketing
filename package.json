@@ -1,0 +1,64 @@
+{
+  "name": "intown-fundraising-platform",
+  "version": "1.0.0",
+  "description": "InTown Metaverse Fundraising & Token Launch Platform - Economic Control Center",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:sepolia": "hardhat run contracts/scripts/deploy.js --network sepolia",
+    "deploy:mainnet": "hardhat run contracts/scripts/deploy.js --network mainnet",
+    "verify": "hardhat verify --network",
+    "node": "hardhat node"
+  },
+  "keywords": [
+    "web3",
+    "ethereum",
+    "nft",
+    "crowdfunding",
+    "metaverse",
+    "fundraising",
+    "token-launch"
+  ],
+  "author": "InTown Metaverse Team",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "@rainbow-me/rainbowkit": "^2.0.0",
+    "@tanstack/react-query": "^5.28.0",
+    "dotenv": "^16.4.0",
+    "ethers": "^6.11.0",
+    "framer-motion": "^11.0.0",
+    "graphql": "^16.8.0",
+    "graphql-request": "^6.1.0",
+    "lucide-react": "^1.14.0",
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "viem": "^2.9.0",
+    "wagmi": "^2.5.0",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.0",
+    "hardhat": "^2.20.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
