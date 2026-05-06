@@ -11,7 +11,11 @@ export default function PromotersPage() {
   return (
     <main className="min-h-screen bg-black text-white pb-24">
       {/* Navigation */}
-      <Navigation />
+      <Navigation 
+        buttonText="Mint Event License"
+        buttonTextMobile="Mint License"
+        buttonHref="#genesis"
+      />
 
       {/* Back Navigation */}
       <div className="container mx-auto px-4 sm:px-6 pt-4 sm:pt-6">

@@ -15,7 +15,11 @@ export default function NodeHostsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <Navigation />
+      <Navigation 
+        buttonText="Register Node"
+        buttonTextMobile="Register"
+        buttonHref="#service-fees"
+      />
 
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden">

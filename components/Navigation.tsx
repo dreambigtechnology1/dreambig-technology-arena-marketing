@@ -3,7 +3,28 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Navigation() {
+interface NavigationProps {
+  buttonText?: string;
+  buttonTextMobile?: string;
+  buttonHref?: string;
+  buttonOnClick?: () => void;
+}
+
+export default function Navigation({ 
+  buttonText = 'Mint Ticket',
+  buttonTextMobile,
+  buttonHref = '#',
+  buttonOnClick
+}: NavigationProps) {
+  const mobileText = buttonTextMobile || buttonText;
+  
+  const ButtonContent = () => (
+    <>
+      <span className="hidden sm:inline">{buttonText}</span>
+      <span className="sm:hidden">{mobileText}</span>
+    </>
+  );
+
   return (
     <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -23,11 +44,22 @@ export default function Navigation() {
             />
           </Link>
 
-          {/* Activate Genesis Stake Button */}
-          <button className="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-lg bg-gradient-to-r from-[#4B21FF] to-[#00F0FF] font-semibold hover:scale-105 transition-transform text-xs sm:text-sm md:text-base whitespace-nowrap">
-            <span className="hidden sm:inline">Activate Genesis Stake</span>
-            <span className="sm:hidden">Activate</span>
-          </button>
+          {/* Dynamic CTA Button */}
+          {buttonOnClick ? (
+            <button 
+              onClick={buttonOnClick}
+              className="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-lg bg-gradient-to-r from-[#4B21FF] to-[#00F0FF] font-semibold hover:scale-105 transition-transform text-xs sm:text-sm md:text-base whitespace-nowrap"
+            >
+              <ButtonContent />
+            </button>
+          ) : (
+            <a 
+              href={buttonHref}
+              className="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-lg bg-gradient-to-r from-[#4B21FF] to-[#00F0FF] font-semibold hover:scale-105 transition-transform text-xs sm:text-sm md:text-base whitespace-nowrap"
+            >
+              <ButtonContent />
+            </a>
+          )}
         </div>
       </div>
     </header>

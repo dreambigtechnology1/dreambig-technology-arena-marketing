@@ -14,7 +14,11 @@ export default function SponsorsPage() {
   return (
     <main className="min-h-screen bg-black text-white pb-24">
       {/* Navigation */}
-      <Navigation />
+      <Navigation 
+        buttonText="Sponsor Now"
+        buttonTextMobile="Sponsor"
+        buttonHref="mailto:sponsors@intownmetaverse.com"
+      />
 
       {/* Back Navigation */}
       <div className="container mx-auto px-4 sm:px-6 pt-4 sm:pt-6">

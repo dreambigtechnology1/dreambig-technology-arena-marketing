@@ -10,7 +10,11 @@ import ProgressFooter from '@/components/ProgressFooter';
 export default function FansPage() {
   return (
     <div className="min-h-screen bg-black">
-      <Navigation />
+      <Navigation 
+        buttonText="Mint Ticket"
+        buttonTextMobile="Mint"
+        buttonHref="#"
+      />
       
       {/* Back Navigation */}
       <div className="container mx-auto px-4 sm:px-6 pt-4 sm:pt-6">
